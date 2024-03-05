@@ -16,11 +16,11 @@ function App() {
 
   let sendMessage = () => {
     parent.postMessage(
-      { pluginMessage: {colors: scale}, pluginId: "1346053186775427251" },
+      { pluginMessage: {colors: scale}, pluginId: "797696673804519719" },
       "https://www.figma.com"
     );
 
-    console.log("wohoo");
+    
   };
 
   return (
