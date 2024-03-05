@@ -16,7 +16,7 @@ function App() {
 
   let sendMessage = () => {
     parent.postMessage(
-      { pluginMessage: steps, pluginId: "1346053186775427251" },
+      { pluginMessage: scale, pluginId: "1346053186775427251" },
       "https://www.figma.com"
     );
 
