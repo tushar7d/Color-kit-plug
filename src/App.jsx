@@ -11,11 +11,11 @@ function App() {
   const [steps, setSteps] = useState(6);
 
   let scale = chroma
-    .scale([color, chroma(color).darken(2)])
+    .scale([chroma(color).brighten(1),color, chroma(color).darken(1)])
     .mode("lch")
     .colors(steps);
 
-  console.log(scale);
+  
 
   return (
     <div className="p-3 resposive flex justify-between flex-col   h-screen  ">
@@ -24,7 +24,7 @@ function App() {
         <div>BASE COLOR</div>{" "}
         <div
           className=" ml-2 rounded-md size-[24px]"
-          style={{ backgroundColor: color }}
+         
         />
       </h2>
 
@@ -43,6 +43,15 @@ function App() {
       />
 
 <h2 className=" text-lg font-mono  mt-8  inline-flex">PREVIEW</h2>
+
+<div className="flex space-x-2 mt-4">
+{scale.map((i,index)=>{
+  return(
+    <div key={index} className=" size-8 rounded-md"  style={{ backgroundColor: i }} />
+  )
+})}
+</div>
+
 </section>
 <section className=" flex flex-col  items-center">
 <Button className="mt-12 mb-6 w-full">Generate</Button>
