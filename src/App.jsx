@@ -37,13 +37,13 @@ function App() {
   };
 
   return (
-    <Tabs defaultValue="account" className="w-[400px] p-3">
+    <Tabs defaultValue="account" className="p-3 ">
       <TabsList>
         <TabsTrigger value="account">Single</TabsTrigger>
         <TabsTrigger value="password">Multi</TabsTrigger>
       </TabsList>
       <TabsContent value="account">
-        <div className="flex flex-col justify-between h-[90vh] resposive ">
+        <div className="flex flex-col justify-between h-[90vh] responsive ">
           <section>
             <h2 className="flex items-center justify-between mb-4 font-mono text-lg ">
               <div>BASE COLOR</div>
@@ -97,9 +97,9 @@ function App() {
               <div>BASE COLOR</div>
               <div className=" ml-2 rounded-md size-[24px]" />
             </h2>
-            <div className="flex space-x-4" >
-            <div> <HexColorPicker color={colorUno} onChange={setColorUno} /></div>
-            <div> <HexColorPicker color={colorDos} onChange={setColorDos} /></div>
+            <div className="flex space-x-2 " >
+            <div > <HexColorPicker color={colorUno} onChange={setColorUno} /></div>
+            <div > <HexColorPicker color={colorDos} onChange={setColorDos} /></div>
             
             </div>
              
