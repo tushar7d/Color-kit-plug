@@ -16,11 +16,11 @@ function App() {
 
   let sendMessage = () => {
     parent.postMessage(
-      { pluginMessage: "anything here", pluginId: "1346053186775427251" },
+      { pluginMessage: steps, pluginId: "1346053186775427251" },
       "https://www.figma.com"
     );
 
-    console.log("wohoo")
+    console.log("wohoo");
   };
 
   return (
@@ -62,7 +62,9 @@ function App() {
         </div>
       </section>
       <section className="flex flex-col items-center ">
-        <Button onClick={sendMessage}  className="w-full mt-12 mb-6" >Generate</Button>
+        <Button onClick={sendMessage} className="w-full mt-12 mb-6">
+          Generate
+        </Button>
         <div className="font-mono text-xs text-black ">
           Made with ❤️ in India
         </div>
